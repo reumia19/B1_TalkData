@@ -70,7 +70,7 @@ public class NTalkManager : MonoBehaviour
         //QuestTalk (퀘스트 번호, 오브젝트 번호)
         // 인트로
         talkData.Add(1000 + 10, new string[] {
-            "It's been a year since I lost contact with my sister.:11",
+            "It's been half a year since I lost contact with my sister.:11",
             "After asking around, I found this mansion. Hope she's here....:11",
             "Please, come on in. I'll take you to the second-floor lobby.:20",
             "(That's weird. Everything seems familiar to him. Like he knows who I am...):11"
@@ -463,11 +463,12 @@ public class NTalkManager : MonoBehaviour
         portraitData.Add(20 + 1, portaritArr[4]);
         portraitData.Add(20 + 2, portaritArr[5]);
         portraitData.Add(30 + 0, portaritArr[6]);
+        portraitData.Add(40 + 0, portaritArr[7]);
 
         nameData.Add(10, "Pandora");
         nameData.Add(20, "Houseowner");
         nameData.Add(30, "Sebastian");
-        nameData.Add(40, "오필리어");
+        nameData.Add(40, "Police");
     }
 
     void GenerateKorData()
@@ -491,7 +492,7 @@ public class NTalkManager : MonoBehaviour
         //QuestTalk (퀘스트 번호, 오브젝트 번호)
         // 인트로
         talkData.Add(1000 + 10, new string[] {
-            "동생과 연락이 끊긴 지 벌써 1년이 지났다.:11",
+            "동생과 연락이 끊긴 지 벌써 반년이 지났다.:11",
             "수소문해서 알게 된 이 저택. 부디 이곳에서는 동생을 찾을 수 있기를.....:11",
             "들어오시죠. 2층으로 안내하겠습니다.:20",
             "(내가 누군지 말하지도 않았는데...? 모든 일이 익숙한 듯 보인다.):11"
@@ -643,10 +644,9 @@ public class NTalkManager : MonoBehaviour
             "내 방에 찾을 건 없겠지만, 뒤져는 보시던가.:30"
         });
         //여기부터 추가대사
-        talkData.Add(60 + 3100 + 700, new string[] { //3760
-            "웽알_1.:30"
+        talkData.Add(60 + 3100 + 700, new string[] { //
+            "뭐야?.:30"
         });
-
 
         //푸른수염 갤러리 대사
         talkData.Add(60 + 2001 , new string[] {
@@ -759,9 +759,8 @@ public class NTalkManager : MonoBehaviour
         //한량 방
         talkData.Add(10000 + 30 + 1, new string[] { "(화장대야. 특별한 건 없어.)" });
         talkData.Add(10000 + 30 + 2, new string[] { "(진짜같은 조화야.)" });
-        talkData.Add(10000 + 30 + 3, new string[] { "(아까는 못 본 종이야. Night, Hamlet이라고 적혀있어. 무슨 의미일까?)" });
+        talkData.Add(10000 + 30 + 3, new string[] { "(분홍색 매니큐어야. 동생이 좋아하던 색이야. 동생이 너무 보고싶어.)" });
         talkData.Add(10000 + 30 + 4, new string[] { "(분홍색 매니큐어야. 동생이 좋아하던 색이야. 동생이 너무 보고싶어.)" });
-        talkData.Add(10000 + 30 + 5, new string[] { "(분홍색 매니큐어야. 동생이 좋아하던 색이야. 동생이 너무 보고싶어.)" });
         //라코스테방
         talkData.Add(10000 + 20 + 1, new string[] { "(라코스테는 게임을 좋아하는구나.)" });
         talkData.Add(10000 + 20 + 2, new string[] { "(라코스테 방에는 덩굴들이 많구나.)" });
@@ -774,7 +773,7 @@ public class NTalkManager : MonoBehaviour
         talkData.Add(10000 + 120 + 6, new string[] { "(여기 왜 욕조가 있지?)" });
 
         //지하실 입장
-        talkData.Add(1000 + 80, new string[] { "여...여긴 도대체...!:10", "수상한 것들이 많아. 한 번 조사해보자." });
+        talkData.Add(1000 + 80, new string[] { "여...여긴 도대체...!:10", "수상한 것들이 많아. 한 번 조사해보자.:10"});
 
         //조사완료
 
@@ -784,17 +783,33 @@ public class NTalkManager : MonoBehaviour
         talkData.Add(1000 + 81 + 200, new string[] { "여긴 범죄현장이야.:10", "피 묻은 바닥, 위험한 화학약품들,  흉기들까지...:10", "집주인은..설마 살인마인 걸까..? 설마 내 동생까지...?:10", "2층에서 전화기를 본 것 같아. 서두르자.:10" });
 
         //저나
-        talkData.Add(1000 + 91, new string[]
+
+        talkData.Add(4000, new string[]
         {
-            "네 경찰서입니다.:10",
+            "전화기다:10" });
+
+        talkData.Add(4000 + 90, new string[]
+        {
+            "네 경찰서입니다.:40",
             "여기..! 여기 살인사건이 일어난 것 같아요!:10",
-            "우선 침착하시고요. 뭐 증거나 그런 게 있으십니까?:10",
+            "우선 침착하시고요. 뭐 증거나 그런 게 있으십니까?:40",
             "피 묻은 흉기도 있고..  또...:10",
-            "흐음.. 시신을 보거나 살해 현장을 목격하신 겁니까?:10",
+            "흐음.. 시신을 보거나 살해 현장을 목격하신 겁니까?:40",
             "그..그건 아니지만..!:10"
            });
-        choiceData.Add(1000 + 91, new Choice("", new string[] { "" }));
-
+        choiceData.Add(4000 + 90, new Choice("(어떻게 하지..)", new string[] { "(이상한 약품들과 과하게 나온 수도세가 수상해)", "(둔기로 피해자를 가격한게 틀림없어)"}));
+        talkData.Add(4000 + 90+100, new string[]
+        {
+            "범인은 화학약품을 이용해 시신을 처리했어요. :10",
+            "염산을 이용해 살해하고 욕조로 유기한게..틀림없어요..:10",
+            "알겠습니다. 출발하겠습니다.:40"
+           });
+        talkData.Add(4000 + 90+200, new string[]
+        {
+            "(둔기로 피해자를 가격한게 틀림없어):10",
+            "범인은 둔기로 살해했어요.:10",
+            "예..알겠습니다. 출발하겠습니다.:40"
+           });
 
         //시나리오 끗
 
@@ -884,11 +899,12 @@ public class NTalkManager : MonoBehaviour
         portraitData.Add(20+1, portaritArr[4]);
         portraitData.Add(20+2, portaritArr[5]);
         portraitData.Add(30+0, portaritArr[6]);
+        portraitData.Add(40 + 0, portaritArr[7]);
 
         nameData.Add(10, "한도아");
         nameData.Add(20, "푸른수염");
         nameData.Add(30, "라코스테");
-        nameData.Add(40, "오필리어");
+        nameData.Add(40, "경찰");
 
         //오브젝트 조사
         talkData.Add(10000 + 10 + 1, new string[] {"앗! 서랍 안에 벌레가 있잖아. 빨리 닫자."});
